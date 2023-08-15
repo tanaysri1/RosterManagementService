@@ -14,10 +14,27 @@ public class EmployeeService {
 
 	@Autowired
 	EmployeeRepo emp;
+	
+	@Autowired
+	Employee empl;
 
 	public List<Employee> getAllEmployee() {
 		System.out.println("Enter in the Service");
 		return emp.findAll();
+	}
+	
+	public Employee UpdateEmp(Employee e)
+	{
+		Employee em = getEmpById(e.getId());
+		empl.setAddress(e.getAddress());
+		empl.setDeptNo(e.getDeptNo());
+		empl.setId(e.getId());
+		empl.setIn(e.getInTime());
+		empl.setOut(e.getOutTime());
+		
+		return empl;
+		
+		
 	}
 
 	public Employee getEmpById(int id) {

@@ -12,7 +12,6 @@ public class Employee {
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY )
-	
 	private int id;
 	private int deptNo;
 	private String address;
@@ -51,14 +50,14 @@ public class Employee {
 	public String getInTime() {
 		return inTime;
 	}
-	public void setIn(String in) {
-		this.inTime = in;
+	public void setIn(String inTime) {
+		this.inTime = inTime;
 	}
 	public String getOutTime() {
 		return outTime;
 	}
-	public void setOut(String out) {
-		this.outTime = out;
+	public void setOut(String outTime) {
+		this.outTime = outTime;
 	}
 	@Override
 	public String toString() {
