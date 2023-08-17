@@ -1,0 +1,16 @@
+
+.btn-lg {
+    font-size: 1.25rem;
+    padding: 10px 25px;
+}
+
+.display-3 {
+    font-size: 3rem;
+}
+
+.custom-image-bg {
+    background-image: url('../components/Images/HomePage.jpg');
+    background-size: cover;
+    background-position: center center;
+    height: calc(100vh - 340px);
+}
