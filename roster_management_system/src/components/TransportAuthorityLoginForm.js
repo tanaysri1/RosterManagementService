@@ -1,8 +1,11 @@
 import React, { useState } from 'react';
 import { Form, Button } from 'react-bootstrap';
 import './TransportAuthorityLoginForm.css';
+<<<<<<< HEAD
 import SignupForm from './SignUpForm'; 
 import ForgotPassword from "./ForgotPassword";
+=======
+>>>>>>> 2ce06993ddf55553946f9b1a95d9417e689946d9
 
 function TransportAuthorityLoginForm() {
     const [formData, setFormData] = useState({
@@ -10,8 +13,11 @@ function TransportAuthorityLoginForm() {
         password: '',
     });
 
+<<<<<<< HEAD
     const [activeForm, setActiveForm] = useState(null);
 
+=======
+>>>>>>> 2ce06993ddf55553946f9b1a95d9417e689946d9
     const handleInputChange = (event) => {
         const { name, value } = event.target;
         setFormData((prevData) => ({
@@ -30,10 +36,13 @@ function TransportAuthorityLoginForm() {
         }
     };
 
+<<<<<<< HEAD
     const handleButtonClick = (formType) => {
         setActiveForm(formType);
     };
 
+=======
+>>>>>>> 2ce06993ddf55553946f9b1a95d9417e689946d9
     return (
         <Form className="transport-authority-form" onSubmit={handleFormSubmit}>
             <h2>Login as Transport Authority</h2>
@@ -60,6 +69,7 @@ function TransportAuthorityLoginForm() {
             <Button variant="info" type="submit">
                 Login as Transport Authority
             </Button>
+<<<<<<< HEAD
             <p>
                 <Button variant="success" className="btn-sm" onClick={() => handleButtonClick('SignupForm')}>
                     Sign Up
@@ -72,6 +82,8 @@ function TransportAuthorityLoginForm() {
                 {activeForm === 'SignupForm' && <SignupForm />}
                 {activeForm === 'ForgotPassword' && <ForgotPassword />}
             </div>
+=======
+>>>>>>> 2ce06993ddf55553946f9b1a95d9417e689946d9
         </Form>
     );
 }

@@ -1,8 +1,11 @@
 import React, { useState } from 'react';
 import { Form, Button } from 'react-bootstrap';
 import './DriverLoginForm.css';
+<<<<<<< HEAD
 import SignupForm from './SignUpForm'; 
 import ForgotPassword from './ForgotPassword';
+=======
+>>>>>>> 2ce06993ddf55553946f9b1a95d9417e689946d9
 
 function DriverLoginForm() {
     const [formData, setFormData] = useState({
@@ -10,8 +13,11 @@ function DriverLoginForm() {
         password: '',
     });
 
+<<<<<<< HEAD
     const [activeForm, setActiveForm] = useState(null);
 
+=======
+>>>>>>> 2ce06993ddf55553946f9b1a95d9417e689946d9
     const handleInputChange = (event) => {
         const { name, value } = event.target;
         setFormData((prevData) => ({
@@ -24,16 +30,23 @@ function DriverLoginForm() {
         event.preventDefault();
         // Simulated login logic
         if (formData.username === 'driver' && formData.password === 'password') {
+<<<<<<< HEAD
             alert('Login successful as Driver!');
+=======
+            alert('Login successful!');
+>>>>>>> 2ce06993ddf55553946f9b1a95d9417e689946d9
         } else {
             alert('Invalid username or password');
         }
     };
 
+<<<<<<< HEAD
     const handleButtonClick = (formType) => {
         setActiveForm(formType);
     };
 
+=======
+>>>>>>> 2ce06993ddf55553946f9b1a95d9417e689946d9
     return (
         <Form className="driver-form" onSubmit={handleFormSubmit}>
             <h2>Login as Driver</h2>
@@ -60,6 +73,7 @@ function DriverLoginForm() {
             <Button variant="success" type="submit">
                 Login as Driver
             </Button>
+<<<<<<< HEAD
             <p>
     <Button variant="warning" className="btn-sm" onClick={() => handleButtonClick('SignupForm')}>
         SignUp
@@ -73,6 +87,8 @@ function DriverLoginForm() {
     {activeForm === 'ForgotPassword' && <ForgotPassword />}
 </div>
 
+=======
+>>>>>>> 2ce06993ddf55553946f9b1a95d9417e689946d9
         </Form>
     );
 }

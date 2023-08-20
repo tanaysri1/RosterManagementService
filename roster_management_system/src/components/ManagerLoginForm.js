@@ -1,8 +1,11 @@
 import React, { useState } from 'react';
 import { Form, Button } from 'react-bootstrap';
 import './ManagerLoginForm.css';
+<<<<<<< HEAD
 import SignUpForm from './SignUpForm';
 import ForgotPassword from './ForgotPassword';
+=======
+>>>>>>> 2ce06993ddf55553946f9b1a95d9417e689946d9
 
 function ManagerLoginForm() {
     const [formData, setFormData] = useState({
@@ -10,8 +13,11 @@ function ManagerLoginForm() {
         password: '',
     });
 
+<<<<<<< HEAD
     const [activeForm, setActiveForm] = useState(null);
 
+=======
+>>>>>>> 2ce06993ddf55553946f9b1a95d9417e689946d9
     const handleInputChange = (event) => {
         const { name, value } = event.target;
         setFormData((prevData) => ({
@@ -30,10 +36,13 @@ function ManagerLoginForm() {
         }
     };
 
+<<<<<<< HEAD
     const handleButtonClick = (formType) => {
         setActiveForm(formType);
     };
 
+=======
+>>>>>>> 2ce06993ddf55553946f9b1a95d9417e689946d9
     return (
         <Form className="manager-form" onSubmit={handleFormSubmit}>
             <h2>Login as Manager</h2>
@@ -60,6 +69,7 @@ function ManagerLoginForm() {
             <Button variant="warning" type="submit">
                 Login as Manager
             </Button>
+<<<<<<< HEAD
             <p>
                 <Button variant="success" className="btn-sm" onClick={() => handleButtonClick('SignUpForm')}>
                     SignUp
@@ -73,6 +83,8 @@ function ManagerLoginForm() {
                 {activeForm === 'SignUpForm' && <SignUpForm />}
                 {activeForm === 'ForgotPassword' && <ForgotPassword />}
             </div>
+=======
+>>>>>>> 2ce06993ddf55553946f9b1a95d9417e689946d9
         </Form>
     );
 }
