@@ -32,6 +32,24 @@ public class RosterService {
         return rosterDetailsRepo.findAll();
     }
 
+    public String updateRoster(Long id, RosterDetails updatedRoster) {
+        RosterDetails existingRoster = rosterDetailsRepo.findById(id).orElse(null);
+        if (existingRoster != null) {
+            existingRoster.setEmpid(updatedRoster.getEmpid());
+            existingRoster.setDate(updatedRoster.getDate());
+            existingRoster.setDriverName(updatedRoster.getDriverName());
+            existingRoster.setPickup_time(updatedRoster.getPickup_time());
+            existingRoster.setDrop_time(updatedRoster.getDrop_time());
+            existingRoster.setVehicle_Number(updatedRoster.getVehicle_Number());
+            existingRoster.setLocation(existingRoster.getLocation());
+            existingRoster.setShift_time(existingRoster.getShift_time());
+            existingRoster.setEmpName(existingRoster.getEmpName());
+            rosterDetailsRepo.save(existingRoster);
+            return "Record updated successfully";
+        } else {
+            return "Record not found";
+        }
     
    
+}
 }

@@ -40,7 +40,7 @@ public class UserController {
         User loggedInUser = userService.findByUsernameAndPassword(user.getUsername(), user.getPassword());
         if (loggedInUser != null) {
              ResponseEntity.ok(loggedInUser); 
-             return loggedInUser;// Return the user, including role, in the response
+             return loggedInUser;
         } else {
             return null;
         }

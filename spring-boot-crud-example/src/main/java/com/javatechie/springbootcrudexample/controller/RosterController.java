@@ -43,4 +43,10 @@ public class RosterController {
         List<RosterDetails> rosterDetails = rosterService.getAllRosterDetails();
         return ResponseEntity.ok(rosterDetails);
     }
+    
+    @PutMapping("/update/{id}")
+    public ResponseEntity<String> updateRoster(@PathVariable Long id, @RequestBody RosterDetails updatedRoster) {
+        String result = rosterService.updateRoster(id, updatedRoster);
+        return ResponseEntity.ok(result);
+    }
 }
